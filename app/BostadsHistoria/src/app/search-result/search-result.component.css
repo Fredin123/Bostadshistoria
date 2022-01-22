@@ -1,0 +1,9 @@
+#searchResultContainer{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+ul {
+    list-style-type: none;
+}

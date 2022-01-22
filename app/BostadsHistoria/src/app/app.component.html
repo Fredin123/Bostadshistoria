@@ -1,0 +1,45 @@
+<div class="content-outer-container">
+    <div class="content-inner-container">
+        <mat-toolbar color="primary">
+            <span>Bostadshistoria</span>
+        </mat-toolbar>
+
+        <div id="searchMiddle" class="center">
+            
+            <span class="centeredText liftUp">Sök tidigare försäljningar för </span>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Gatunamn</mat-label>
+                <input matInput placeholder="Ex. Haga" value="" #searchStreet>
+            </mat-form-field>
+
+            <span class="centeredText liftUp">i länet</span>
+            
+
+            <mat-form-field appearance="fill">
+                <mat-label>Län</mat-label>
+                <mat-select [formControl]="countySelecter" multiple>
+                  <mat-select-trigger>
+                    {{countySelecter.value ? countySelecter.value[0] : ''}}
+                    <span *ngIf="countySelecter.value?.length > 1" class="example-additional-selection">
+                      (+{{countySelecter.value.length - 1}} {{countySelecter.value?.length === 2 ? 'other' : 'others'}})
+                    </span>
+                  </mat-select-trigger>
+                  <mat-option *ngFor="let county of countyList" [value]="county">{{county}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <button mat-button color="accent" (click)="clickButton($event)" class="liftUp leftRightMargin1">Sök bostad</button>
+        </div>
+        <mat-spinner *ngIf="!hideSpinner" style="margin: 0px auto;"></mat-spinner>
+        <app-search-result [inData]="currentSearchResult"></app-search-result>
+        
+    </div>
+</div>
+<!--<div class="footer-container">
+    footer
+</div>-->
+
+
+
+<router-outlet></router-outlet>

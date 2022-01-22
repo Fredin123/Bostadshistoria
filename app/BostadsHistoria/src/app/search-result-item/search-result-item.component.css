@@ -1,0 +1,38 @@
+.itemContainer{
+    display:flex;
+    overflow: scroll;
+    width:100%;
+}
+
+.streetImage{
+    width: 300px;
+}
+
+.itemBlock{
+    margin: 8px;
+    border: solid 1px #e8e8e8;
+    border-radius: 16px;
+    padding:6px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.itemBlock:hover{
+    box-shadow: rgba(204, 221, 255, 0.4) 0px 7px 29px 0px;
+}
+
+.streetProps{
+    font-size: small;
+    color:dimgray;
+}
+
+.fullDisplay{
+    display:block;
+}
+
+.displayImage{
+    display: block;
+    width:60%;
+    margin:0px auto;
+}

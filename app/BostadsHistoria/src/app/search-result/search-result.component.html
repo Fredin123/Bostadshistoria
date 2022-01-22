@@ -1,0 +1,6 @@
+<ul id="searchResultContainer" #container>
+    <li *ngFor="let streetItem of myItems; index as i;">
+        <app-search-result-item [streetItems]="streetItem"></app-search-result-item>
+        <!--<span *ngIf="isFirst">default</span>-->
+    </li>  
+</ul>

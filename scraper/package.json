@@ -1,0 +1,24 @@
+{
+  "type": "module",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.10",
+    "express": "^4.17.1",
+    "file-type": "^16.5.3",
+    "forever": "^4.0.1",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "imagemin": "^8.0.1",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "mongodb": "^4.1.0",
+    "open": "^8.2.1",
+    "path": "^0.12.7",
+    "puppeteer": "^10.2.0",
+    "puppeteer-element2selector": "^0.0.3",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
+    "winston": "^3.3.3",
+    "winston-daily-rotate-file": "^4.5.5"
+  }
+}

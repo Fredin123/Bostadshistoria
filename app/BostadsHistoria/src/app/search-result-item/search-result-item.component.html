@@ -1,0 +1,11 @@
+<div class="itemContainer">
+    <div class="itemBlock"  *ngFor="let streetItem of streetItems; index as i;"
+    [ngStyle]="{'background-color': itemDisplayColor}">
+        <div (click)="onItemClick(streetItem)">
+            <p class="streetProps">{{streetItem.streetName}} - {{streetItem.price}}
+            <br>Publicerad cirka: {{streetItem.created_on}} - <a href="{{streetItem.url}}">Länk</a></p>
+            <img class="streetImage" src="{{streetItem.images[0].base64}}">
+        </div>
+    </div>
+</div>
+<div class="fullDisplay" #fullDisplay></div>
